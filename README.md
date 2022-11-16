@@ -1,1 +1,1 @@
-[пример](http://vilya27.github.io/trainingProjects/layout3/ "Необязательная подсказка")
+[пример](http://vilya27.github.io/trainingProjects/layout3/index.html "Необязательная подсказка")
