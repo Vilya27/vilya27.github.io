@@ -1,1 +1,2 @@
-[пример](http://vilya27.github.io/trainingProjects/layout3/index.html "Необязательная подсказка")
+Photo collage 
+[Preview website](https://vilya27.github.io/)
