@@ -1,39 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Agency</title>
+    <link rel="icon" href="img/Logo.svg">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
     <main>
-        <div class="header-bg">
-            <header class="header">
-                <div class="header-logo"><p>Logo</p></div>
-                <div class="header-menu">
-                    <ul>
-                        <li><a href="#">Home <img src="img/arrow3.svg" alt=""></a></li>
-                        <li><a href="#">Services <img src="img/arrow3.svg" alt=""></a></li>
+        <div class="menu-wrap">
+            <div class="menu">
+                <div class="menu-logo">Logo</div>
+                <div class="menu-burger">
+                    <input type="checkbox" id="menu-toggle">
+                    <label class='menu-button-container' for="menu-toggle">
+                        <div class='menu-button'></div>
+                    </label>
+
+                    <ul class="menu-list">
+                        <li><a href="#hed-content">Home</a></li>
+                        <li><a href="#second-block">Services</a></li>
                         <li><a href="#therd-block">Work</a></li>
                         <li><a href="#fourth-block">About us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a id="contact" href="#">CONTACT</a></li>
-                        <li> <img class="header-object" src="img/lupa.svg" alt="magnifier"></li>
+                        <li><a href="#fifth-block">Blog</a></li>
+                        <li><a href="#footer">CONTACT</a></li>
+                        <!-- <li> <img class="header-object" src="img/lupa.svg" alt="magnifier"></li> -->
+                        <!-- <img class="header-object" src="img/lupa.svg" alt="magnifier"> -->
                     </ul>
-                
                 </div>
-            </header>
+            </div>
+            <a href="#hed-content">
+                <img id="upBtn" width="48" height="48" src="https://img.icons8.com/ios-filled/50/circled-right-2.png" alt="circled-right-2"/>
+            </a>
+        </div>
+        <div class="header-bg">
+            
+            <script>
+                let prevPos = 0;
+                let burger = document.querySelector(".menu-burger");
+                let list = document.querySelector(".menu-list");
+                document.addEventListener("scroll", function(){
+                    let currPos = pageYOffset;
+                    // if(window.innerWidth < 770) {
+                        if(currPos > prevPos) {
+                            prevPos = currPos;
+                            burger.style.position = "static";
+                        } 
+                        if(currPos < prevPos && pageYOffset > 700) {
+                            if(window.innerWidth < 770){
+                                burger.style.position = "fixed";
+                                list.style.bgcolor = "#313131ec";
+                                list.style["boxShadow"] = "0 0 30px 10px #777777 inset";
+                                prevPos = currPos;
+
+                            } else {
+                                document.querySelector(".menu-wrap").style.position = "fixed";
+                                prevPos = currPos;
+                            }
+                        } else {
+                            if(window.innerWidth < 770){
+                                burger.style.position = "static";
+                                list.style.bgcolor = "none";
+                                list.style["boxShadow"] = "none";
+                            } else {
+                                document.querySelector(".menu-wrap").style.position = "absolute";
+                            }
+                        }
+                    // } 
+                    // else {
+                        if(currPos > 700) {
+                            document.querySelector("#upBtn").style.display = "block";
+                        } else {
+                            document.querySelector("#upBtn").style.display = "none";
+
+                        }
+                    // }
+                });
+            </script>
        
             <div class="container">
+                <a name="hed-content"></a>
                 <div class="hed-content">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <div class="quote">
                                 <p>CREATIVE MIND, CREATIVE WORKS.</p>
                             </div>
@@ -55,7 +111,7 @@
                     </div>
                     <div class="box">
                         <div class="row">
-                            <div class="col-md-4 ">
+                            <div class="col-md-4">
                                 <div class="box-1">
                                     <img src="img/pilot.svg" alt="icon1">
                                     <p class="box-header">Future Concept</p>
@@ -94,22 +150,23 @@
 
 
         <div class="second-block">
-        <div class="container">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-1">
+                        <a name="second-block"></a>
                         <div class="service">
                             <div class="service-quote">
-                            <img src="img/Line 6.svg" alt="">
-                            <h1>Services</h1>
-                            <p class="ourService">OUR SERVICES FOR CLIENTS</p>
+                                <img src="img/Line6.svg" alt="">
+                                <h1>Services</h1>
+                                <p class="ourService">OUR SERVICES FOR CLIENTS</p>
+                            </div>
+                            <div class="service-box"></div>
                         </div>
-                        <div class="service-box"></div>
                     </div>
-                </div>
 
                 <div class="benefits">
                     <div class="row">
-                        <div class="col-md-4 benefits-box">
+                        <div class="col-md-4 col-sm-4 col-xs-12 benefits-box">
                             <div class="benefits-box-1">
 
                                 <img src="img/graphic.svg" alt="">
@@ -120,7 +177,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4 benefits-box">
+                        <div class="col-md-4 col-sm-4 col-xs-12 benefits-box">
                             <div class="benefits-box-2">
 
                                 <img src="img/cil_pencil.svg" alt="">
@@ -131,7 +188,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4 benefits-box">
+                        <div class="col-md-4 col-sm-4 col-xs-12 benefits-box">
                             <div class="benefits-box-3">
 
                                 <h1>UI Designs</h1>
@@ -143,7 +200,7 @@
                             </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 benefits-box benefits-box-second">
+                        <div class="col-md-4 col-sm-4 col-xs-12 benefits-box benefits-box-second">
                             <div class="benefits-box-1">
 
                                 <img src="img/Group.svg" alt="">
@@ -154,7 +211,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4 benefits-box benefits-box-second">
+                        <div class="col-md-4 col-sm-4 col-xs-12 benefits-box benefits-box-second">
                             <div class="benefits-box-2">
 
                                 <img src="img/zacladka.svg" alt="">
@@ -165,7 +222,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4 benefits-box benefits-box-second">
+                        <div class="col-md-4 col-sm-4 benefits-box benefits-box-second">
                             <div class="benefits-box-4">
                                 <img src="img/paint.svg" alt="">
                                 <h1>Media Pairing</h1>
@@ -176,11 +233,11 @@
                             </div>
                             </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-2 offset-md-5">
-                            <div class="line-vertical">
-                                <img src="img/Line 7.svg" alt="line-vertical">
-                            </div>
+                    <div class="row justify-content-center">
+                        <div class="col-2 line-vertical">
+                            <!-- <div class="line-vertical "> -->
+                                <img src="img/Line7.svg" alt="line-vertical">
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -195,16 +252,17 @@
         <div class="therd-block" id="therd-block">
             <div class="container">
                 <div class="row union-work-but">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-1">
+                        <a name="therd-block"></a>
                         <div class="works">
-                            <img src="img/Line 6.svg" alt="line">
+                            <img src="img/Line6.svg" alt="line">
                             <h1>Works</h1>
                             <p>THINGS WE<sup>`</sup>VE MADE</p>
                         </div>
                     </div>
 
 
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-3">
                             <div class="button">
                                 <a href="">VIEW ALL</a>
                             </div>
@@ -215,36 +273,67 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="photos"> 
-                            <img src="img/Rectangle1.svg" alt="Rectangle1">
-                            <img src="img/Rectangle2.svg" alt="Rectangle2">
-                            <img src="img/Rectangle3.svg" alt="Rectangle3">
-                            <img src="img/Rectangle4.svg" alt="Rectangle4">
-                            <img src="img/Rectangle5.svg" alt="Rectangle5">
-                            <img src="img/Rectangle6.svg" alt="Rectangle6">
-                            <img class="img-specel" src="img/Rectangle7.svg" alt="Rectangle7">
+                        <div class="photo-wrap">
+                            <img id="backBtn" width="48" height="48" src="https://img.icons8.com/ios-filled/50/circled-left-2.png" alt="circled-left-2"/>
+                            <div class="photos"> 
+                                <div>
+                                    <img src="img/Rectangle1.svg" alt="Rectangle1">
+                                    <img src="img/Rectangle2.svg" alt="Rectangle2">
+                                    <img src="img/Rectangle3.svg" alt="Rectangle3">
+                                </div>
+                                <div>
+                                    <img src="img/Rectangle4.svg" alt="Rectangle4">
+                                    <img src="img/Rectangle5.svg" alt="Rectangle5">
+                                    <img src="img/Rectangle6.svg" alt="Rectangle6">
+                                </div>
+                            </div>
+                            <img id="nextBtn" width="48" height="48" src="https://img.icons8.com/ios-filled/50/circled-right-2.png" alt="circled-right-2"/>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2 offset-md-5">
-                        <div class="line-vertical">
-                            <img src="img/Line 7.svg" alt="line-vertical">
-                        </div>
+                <div class="row justify-content-center">
+                    <div class="col-2  line-vertical">
+                        <!-- <div class="line-vertical justify-content-center align-items-center"> -->
+                            <img src="img/Line7.svg" alt="line-vertical">
+                        <!-- </div> -->
                     </div>
                 </div>
 
             </div>
         </div>
+        <script>
+            let scrollContainer = document.querySelector(".photos");
+            let backBtn = document.querySelector("#backBtn");
+            let nextBtn = document.querySelector("#nextBtn");
+    
+            scrollContainer.addEventListener("wheel", (ev) => {
+                ev.preventDefault();
+                scrollContainer.scrollLeft += ev.deltaY;
+                scrollContainer.style.scrollBehavior = "auto";
+    
+            });
+            nextBtn.addEventListener("click", ()=>{
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft += 650;
+            });
+            backBtn.addEventListener("click", ()=>{
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft -= 650;
+            });
+    
+    
+        </script>
 
 
 
         <div class="fourth-block" id="fourth-block">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-5">
+                        <a name="fourth-block"></a>
+
                         <div class="about">
-                            <img src="img/Line 6.svg" alt="line">
+                            <img src="img/Line6.svg" alt="line">
                             <h1>About</h1>
                             <p>WE ARE MORE THAN DIGITAL AGENCY</p>
                         </div>
@@ -252,14 +341,14 @@
 
                 <div class="photo-cards">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-6">
                             <img class="photo-cards-1" src="img/Rectangle8.svg" alt="Rectangle8">
                             <div class="photo-cards-text-1">
                                 <h1>Team Work</h1>
                                 <p>Committed and creative</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-6">
                             <div class="photo-cards-union-2">
                                 <img class="photo-cards-2" src="img/Rectangle9.svg" alt="Rectangle9">
                                 <div class="photo-cards-text-2">
@@ -281,19 +370,19 @@
 
                 <div class="line-text">
                     <div class="row">
-                        <div class="col-md-4 line-text-1">
+                        <div class="col-md-4 col-sm-12 line-text-1">
                             <h1>Who we are</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur<br> 
                                 adipiscing elit, sed do eiusmod tempor<br> 
                                 incididunt ut labore.</p>
                         </div>
-                        <div class="col-md-4 line-text-2">
+                        <div class="col-md-4 col-sm-12 line-text-2">
                             <h1>Our Philosophy</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur<br> 
                                 adipiscing elit, sed do eiusmod tempor<br> 
                                 incididunt ut labore.</p>
                         </div>
-                        <div class="col-md-4 line-text-3">
+                        <div class="col-md-4 col-sm-12 line-text-3">
                             <h1>How we work</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur<br> 
                                 adipiscing elit, sed do eiusmod tempor<br> 
@@ -302,11 +391,11 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-2 offset-md-5">
-                        <div class="line-vertical">
-                            <img src="img/Line 7.svg" alt="line-vertica">
-                        </div>
+                <div class="row justify-content-center">
+                    <div class="col-2 line-vertical justify-content-center">
+                        <!-- <div class="line-vertical"> -->
+                            <img src="img/Line7.svg" alt="line-vertica">
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -316,9 +405,10 @@
         <div class="fifth-block">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
+                        <a name="fifth-block"></a>
                         <div class="testimonials">
-                            <img src="img/Line 6.svg" alt="line">
+                            <img src="img/Line6.svg" alt="line">
                         <h1>Testimonials</h1>
                         <p>WE ARE MORE THAN DIGITAL AGENCY</p>
                         </div>
@@ -370,9 +460,9 @@
                </div>
 
                 <div class="row">
-                    <div class="col-md-2 offset-md-5">
+                    <div class="col-md-2 offset-md-5 offset-sm-5">
                         <div class="line-vertical">
-                            <img src="img/Line 7.svg" alt="line-vertica">
+                            <img src="img/Line7.svg" alt="line-vertica">
                         </div>
                     </div>
                 </div>
@@ -405,12 +495,13 @@
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-12">
+                        <a name="footer"></a>
                         <div class="footer-logo">
                             <p>Logo</p>                              
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-5">
                         <div class="footer-contact">
                             <p class="footer-contact-head">CONTACT US</p><br>
                             <img class="footer-contact-1" src="img/phone-ic.svg" alt="">
@@ -423,7 +514,7 @@
                             <p>Sunday to Friday</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-4">
                         <div class="footer-serveces">
                             <p class="footer-serveces-head">OUR SERVICES</p>
                             <p>Single Project</p>
@@ -432,7 +523,7 @@
                             <p>Works</p>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-3">
                         <div class="footer-about">
                             <p class="footer-about-head">ABOUT US</p>
                             <p>About</p>
@@ -451,10 +542,10 @@
             <div class="container">
                 <!-- <div class="footer2-social"> -->
                 <div class="row footer2-social">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-4">
                             <p>Copyright 2022  Dikshant Goyal</p>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3 col-4">
                             <img src="img/footer1.svg" alt="">
                             <img src="img/footer2.svg" alt="">
                             <img src="img/footer3.svg" alt="">
@@ -474,149 +565,3 @@
     <script src="https://ajax.googleapls.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- МАКЕТ 1 -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My proj</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/moon.svg">
-</head>
-<body>
-    
-<div class="section">
-    <div class="container">
-        первый 
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3 ">
-                <h1 class="header text-center">
-                    <span>Получите видео-инструкцию</span>
-                    <strong class="text-uppercase">Как заработать свой первый миллион</strong>
-                </h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2">
-                <div class="video">
-                    <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/iHqE24Ipv_s?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
-                <div class="form d-grid">
-                    <p class="form-header text-center">Введите свой имайл</p>
-                    <form action="#">
-                        <input type="text" class="form-control" placeholder="Ваше имя">
-                        <input type="text" class="form-control" placeholder="Ваш email" >
-                    </form>
-                    <button class="btn btn-primary btn-lg form-btn">Получить инструкцию</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="section">
-    <div class="container">
-    заголовок секции
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="section-header text-uppercase text-center">Почему это нужно сделать сейчас?</h2>
-        </div>
-    </div>
-    блок с преимуществами
-    <div class="feature text-center">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box ">
-                    <img src="img/1.svg" alt="1 преимущество">
-                    <p>Первое преимущество</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box">
-                    <img src="img/2.svg" alt="2 преимущество" >
-                    <p>Второе преимущество</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box ">
-                    <img src="img/3.svg" alt="3 преимущество" >
-                    <p>Третье преимущество</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box ">
-                    <img src="img/4.svg" alt="4 преимущество" >
-                    <p>Четвертое преимущество</p>
-                </div>
-            </div>
-        </div>
-    </div>
-кнопка
-<div class="mx-auto d-grid">
-    <button class="btn btn-primary btn-lg form-btn">Получить инструкцию</button>
-</div>
-
-    
-</div>
-</div>
-
-
-</body>
-</html> -->
