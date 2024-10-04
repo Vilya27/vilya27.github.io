@@ -1,0 +1,12 @@
+body{
+    color: aliceblue;
+}
+li{
+    display: inline-block;
+    padding: 0.3rem;
+    text-decoration: none;
+    border: 1px solid gray;
+}
+.hidden{
+    display: none;
+}

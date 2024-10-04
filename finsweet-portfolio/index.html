@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>{finsweet</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header_container">
+                <a href="#" class="header_logo"><img src="img/logo.svg" alt="Логотип {finsweet"></a>
+                <nav class="menu">
+                    <ul class="menu_list">
+                        <li class="menu_item"><a href="#home" class="menu_link">Home</a></li>
+                        <li class="menu_item"><a href="#about" class="menu_link">About us</a></li>
+                        <li class="menu_item"><a href="#whatWeDo" class="menu_link">What We Do</a></li>
+                        <li class="menu_item"><a href="#media" class="menu_link">Media</a></li>
+                        <li class="menu_item"><a href="#contact" class="menu_link">Contact</a></li>
+                        <li class="menu_item menu_button"><a href="#donate" class="menu_link ">Donate</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            let burger = document.querySelector(".burger");
+            let burger_count = 0;
+            burger.addEventListener('click', function(){
+                if(burger_count%2 == 0){
+                    burger.classList.add('active');
+                    document.querySelector(".header").style.position = "fixed";
+                    document.querySelector(".header_container").style.width = "100vw";
+                    document.querySelector(".header_container").style.height = "100vh";
+                    document.querySelector(".menu").style.display = "block";
+                } else {
+                    burger.classList.remove('active');
+                    document.querySelector(".header").style.position = "relative";
+                    // document.querySelector(".header_container").style.width = "inherit";
+                    document.querySelector(".header_container").style.height = "inherit";
+                    document.querySelector(".menu").style.display = "none";
+                }
+                burger_count++;
+            })
+        </script>
+
+
+        <main class="main">
+            <section class="firstScreen" id="home">
+                <div class="main_container">
+                    
+                    <h1 class="firstScreen_title">Save the environment today for a better tomorrow</h1>
+                    <div class="firstScreen_block">
+                        <a href="#" class="firstScreen__button">What we do</a>
+                        <a href="#" class="firstScreen_link"><div class="firstScreen_img"></div>Play video</a>
+                    </div>
+                    <div class="firstScreen_below">
+                        <p>23,800 trees planted</p>
+                        <div class="firstScreen_below_line"></div>
+                        <p>5840 donations collected</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secondScreen" id="about">
+                <div class="main_container">
+                    <div class="secondScreen_top">
+                        <div class="secondScreen_top_left">
+                            <div class="secondScreen_top_TopText"><div class="textLine"></div><p class="secondScreen_TopText_text">Know About us</p></div>
+                            <h1 class="secondScreen_top_title">We help nature smile and survive everywhere</h1>
+                            <p class="secondScreen_top_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.<br><br>
+                                Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                            </p>
+                            <a href="#" class="secondScreen_top__button">Learn more</a>
+                        </div>
+
+                        <div class="secondScreen_top_right">
+                            <img src="img/preview_video.jpg" alt="video">
+                        </div>
+                    </div>
+                    
+                    <div class="secondScreen_bottom">
+                        <!-- <p class="secondScreen_bottom_title">our Supporters</p> -->
+                        <div class="secondScreen_bottom_title"><p>our Supporters</p></div>
+                        <div class="secondScreen_bottom_logo">
+                            <img src="img/logo_supporters-1.svg" alt="logo supporters">
+                            <img src="img/logo_supporters-2.svg" alt="logo supporters">
+                            <img src="img/logo_supporters-3.svg" alt="logo supporters">
+                            <img src="img/logo_supporters-4.svg" alt="logo supporters">
+                            <img src="img/logo_supporters-5.svg" alt="logo supporters">
+                            <img src="img/logo_supporters-6.svg" alt="logo supporters">
+                        </div>
+
+                    </div>
+                
+                </div>
+            </section>
+
+            <section class="thirdScreen" id="whatWeDo">
+                <div class="main_container">
+
+                    <div class="thirdScreen_TopText"><div class="textLine"></div><p class="thirdScreen_TopText_text">What we do</p></div>
+
+                    <div class="thirdScreen_block">
+                        <div class="thirdScreen_left">
+                            <p class="thirdScreen_left_title">We care for earth, care for the coming birth</p>
+                            <p class="thirdScreen_left_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                            <div class="thirdScreen_left_block">
+                                <div class="thirdScreen_left_block_item">
+                                    <div class="thirdScreen_left_block_item_title">
+                                        <img src="img/thirdScreen_build.svg" alt="Build Healthy Cities">
+                                        <h2>Build Healthy Cities</h2>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                </div>
+                                <div class="thirdScreen_left_block_item">
+                                    <div class="thirdScreen_left_block_item_title">
+                                        <img src="img/thirdScreen_tree.svg" alt="Tree Plantation">
+                                        <h2>Tree Plantation</h2>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                </div>
+                                <div class="thirdScreen_left_block_item">
+                                    <div class="thirdScreen_left_block_item_title">
+                                        <img src="img/thirdScreen_protect.svg" alt="Protect Land and Water">
+                                        <h2>Protect Land and Water</h2>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                </div>
+                                <div class="thirdScreen_left_block_item">
+                                    <div class="thirdScreen_left_block_item_title">
+                                        <img src="img/thirdScreen_animal.svg" alt="Animal Safety">
+                                        <h2>Animal Safety</h2>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main_container_right">
+                            <img src="img/thirdScreen_image.jpg" alt="picture">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="fourthScreen">
+                <div class="main_container">
+                    <div class="fourthScreen_TopText"><div class="textLine"></div><p class="fourthScreen_TopText_text">Projects we have done</p></div>
+                    <h2 class="fourthScreen_title">We are Creating sustainable society, for everyone and forever.</h2>
+                    <div class="fourthScreen_block">
+                        <div class="fourthScreen_block_item fourthScreen_block_item_1">
+                            <b class="fourthScreen_block_item_title">Mission 40K: Tree<br>plantation</b>
+                            <p class="fourthScreen_block_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <a href="#" class="fourthScreen_block_item__button">See more</a>
+                        </div>
+                        <div class="fourthScreen_block_item fourthScreen_block_item_2">
+                            <b class="fourthScreen_block_item_title">Weekly cleanliness<br>program in city</b>
+                            <p class="fourthScreen_block_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <a href="#" class="fourthScreen_block_item__button">See more</a>
+                        </div>
+                        <div class="fourthScreen_block_item fourthScreen_block_item_3">
+                            <b class="fourthScreen_block_item_title">Wildlife safety program 2021</b>
+                            <p class="fourthScreen_block_item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <a href="#" class="fourthScreen_block_item__button">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.main_container -->
+            </section>
+            <!-- /.fourthScreen -->
+
+            <section class="fifthScreen">
+                <div class="main_container">
+                    <div class="fifthScreen_block">
+                        <div class="fifthScreen_block_left">
+                            <h3 class="fifthScreen_block_left_title">How we spend your donations and where it goes</h3>
+                            <p class="fifthScreen_block_left_text">We understand that when you make a donation, you want to know exactly where your money is going and we pledge to be transparent.</p>
+                            <div class="fifthScreen_block_left_chart">
+                                <div class="fifthScreen_block_left_chart_item"><img src="img/fifthScreen_chart_1.svg" alt="icon chart`s"> <p>40% planting trees</p></div>                            
+                                <div class="fifthScreen_block_left_chart_item"><img src="img/fifthScreen_chart_2.svg" alt="icon chart`s"> <p>35% cleanliness program</p></div>
+                                <div class="fifthScreen_block_left_chart_item"><img src="img/fifthScreen_chart_3.svg" alt="icon chart`s"> <p>10% helping people</p></div>
+                                <div class="fifthScreen_block_left_chart_item"><img src="img/fifthScreen_chart_4.svg" alt="icon chart`s"> <p>10% animal safety</p></div> 
+                                <div class="fifthScreen_block_left_chart_item"><img src="img/fifthScreen_chart_5.svg" alt="icon chart`s"> <p>5% feeding the poor</p></div>                         
+                            </div>
+                        </div>
+                        <div class="fifthScreen_block_right">
+                            <img src="img/fifthScreen_chart.png" alt="chart">
+                        </div>
+                    </div>
+                </div>
+                <!-- /.main_container -->
+            </section>
+            <!-- /.fifthScreen -->
+
+            <div class="main_container" id="donate">
+                <section class="sixthScreen">
+                    <p class="sixthScreen_text">You can contribute to make<br>the environment greener!</p>
+                    <a href="#" class="sixthScreen__button sixthScreen_one">Join as a volunteer</a>
+                    <a href="#" class="sixthScreen__button sixthScreen_two">Donate</a>
+                </section>
+                <!-- /.sixthScreen -->
+            </div>
+            <!-- /.main_container -->
+
+            <section class="seventhScreen" id="media">
+                <div class="main_container">
+                    <div class="seventhScreen_title"><p>Read Our News</p></div>
+                    <div class="seventhScreen_block">
+                        <div class="seventhScreen_container">
+
+                            <div class="seventhScreen_block_item">
+                                <img src="img/seventhScreen_img-1.jpg" alt="greenery">
+                                <b>Don’t destroy greenery and don’t spoil scenery</b>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                            </div>
+                            <div class="seventhScreen_block_item">
+                                <img src="img/seventhScreen_img-2.jpg" alt="climate">
+                                <b> Is climate change happening faster than expected?</b>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                            </div>
+                            <div class="seventhScreen_block_item">
+                                <img src="img/seventhScreen_img-3.jpg" alt="wind farms">
+                                <b>Top 10 facts about wind farms you didn't know</b>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                            </div>
+                            <div class="seventhScreen_block_item">
+                                <img src="img/seventhScreen_img-4.jpg" alt="water">
+                                <b>Our goal is to make water available for everyone</b>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img width="32" height="32" id="backBtn" src="https://img.icons8.com/pastel-glyph/64/circled-chevron-right.png" alt="circled-chevron-right"/>
+                    <img width="32" height="32" id="nextBtn" src="https://img.icons8.com/pastel-glyph/64/circled-chevron-right.png" alt="circled-chevron-right"/>
+                </div>
+                <!-- /.main_container -->
+            </section>
+            <!-- /.seventhScreen -->
+            <script>
+                let scrollContainer = document.querySelector(".seventhScreen_block");
+                let backBtn = document.querySelector("#backBtn");
+                let nextBtn = document.querySelector("#nextBtn");
+        
+                scrollContainer.addEventListener("wheel", (ev) => {
+                    if(window.innerWidth < 900) {
+                        ev.preventDefault();
+                        scrollContainer.scrollLeft += ev.deltaY;
+                        scrollContainer.style.scrollBehavior = "auto";
+                    }
+                });
+                nextBtn.addEventListener("click", ()=>{
+                    scrollContainer.style.scrollBehavior = "smooth";
+                    scrollContainer.scrollLeft += 305;
+                });
+                backBtn.addEventListener("click", ()=>{
+                    scrollContainer.style.scrollBehavior = "smooth";
+                    scrollContainer.scrollLeft -= 305;
+                });
+            </script>
+
+
+            <div class="main_container">
+                <section class="eightScreen">
+                    <div class="eightScreen_title"><p>Our Events</p></div>
+                    <div class="eightScreen_block">
+
+                        <div class="eightScreen_block_item">
+                            <div class="eightScreen_block_item_date">
+                                <b>23</b>
+                                <p>sep</p>
+                            </div>
+                            <div class="eightScreen_block_item_descrip">
+                                <p>Next Events</p>
+                                <b>Say no to plastic usage and save the planet</b>
+                            </div>
+                            <div class="eightScreen_block_item_arrow">
+                                <img src="img/eightScreen_arrowButton.svg" alt="arrow link">
+                            </div>
+                        </div>
+
+                        <div class="eightScreen_block_item">
+                            <div class="eightScreen_block_item_date">
+                                <b>25</b>
+                                <p>sep</p>
+                            </div>
+                            <div class="eightScreen_block_item_descrip">
+                                <p>Next Events</p>
+                                <b>Weekly cleaning program</b>
+                            </div>
+                            <div class="eightScreen_block_item_arrow">
+                                <img src="img/eightScreen_arrowButton.svg" alt="arrow link">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /.eightScreen -->
+            </div>
+            <!-- /.main_container -->
+
+        </main>
+        
+        
+        <footer class="footer" id="contact">
+            <div class="footer_container">
+                <div class="footer_block">
+                    <div class="footer_logo"><img src="img/footer_logo.svg" alt="logo"></div>
+                    <div class="footer_links">
+                        <div class="footer_links_title"><a href="#">Our team</a></div>
+                        <div class="footer_links_title"><a href="#">More</a></div>
+                        <div class="footer_links_title"><a href="#">Connect </a></div>
+                        <div class=""><a href="#">About us</a></div>
+                        <div class=""><a href="#">Projects</a></div>
+                        <div class=""><a href="#">Facebook</a></div>
+                        <div class=""><a href="#">Team</a></div>
+                        <div class=""><a href="#">Events</a></div>
+                        <div class=""><a href="#">Instagram</a></div>
+                        <div class=""><a href="#">What we do</a></div>
+                        <div class=""><a href="#">Donate</a></div>
+                        <div class=""><a href="#">Twitter</a></div>
+                        <div class=""><a href="#">Contact</a></div>
+                        <div class=""><a href="#">Blog</a></div>
+                        <div class=""><a href="#">Linkdin</a></div>
+                    </div>
+                    <div class="footer_subscribe">
+                        <p>Subscribe to get latest<br>updates</p>
+                        <div class="footer_subscribe_input">
+                            <input type="text" placeholder="Your email" class="footer_subscribe_colortext">
+                            <a href="#" class="footer_subscribe__button">Subscribe</a>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

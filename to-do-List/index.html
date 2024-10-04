@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="block">
+        <h1 class="header-list">
+            <b>To-do List</b>
+            <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/untested.png" alt="untested"/>
+        </h1>
+
+        <div class="input-task">
+            <input type="text" placeholder="Add your task" class="input">
+            <button class="input-button"> Add </button>
+        </div>
+
+        <div class="list-task">
+            <ul class="un-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        const inputButton = document.querySelector(".input-button");
+        const inputTask = document.querySelector(".input");
+        const unList = document.querySelector(".un-list");
+        const taskList = document.querySelector(".list-task");
+        // let countTask = 0;
+        
+
+
+        inputButton.addEventListener("click", ()=>{
+            if(inputTask.value){
+
+                let task = document.createElement('li');
+                task.classList.add("list");
+                task.innerHTML = `
+                <form  class = "list-div">
+                    <div>
+                        <label>
+                        <input type="checkbox" value="" class="button-check" >
+                        <p></p>
+                        </label> 
+                    </div>
+                </form>
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/multiply.png" alt="multiply" class = "list-img"/>
+                `
+                task.querySelector('p').innerHTML = inputTask.value;
+                // task.querySelector('p').style.whiteSpace = `normal`;
+                unList.append(task);
+                inputTask.value = "";
+                saveData();
+            }
+        })
+
+
+
+        unList.addEventListener("click", function(e){
+            if(e.target.tagName === "INPUT"){
+                e.target.classList.toggle("checked");
+                // console.log(e.target.classList);
+                // console.log( unList.innerHTML);
+                saveData();
+            } else if(e.target.tagName === "IMG"){
+                e.target.parentElement.remove();
+                saveData();
+            }
+        })
+
+        function saveData(){
+            // console.log( unList.innerHTML);
+            // localStorage.removeItem("data");
+                localStorage.setItem("data", unList.innerHTML);
+                // localStorage.setItem("countTask", countTask);
+            // console.log(localStorage.getItem("data"));
+        }
+        function showTask(){
+            if(localStorage.length != 0) {
+                unList.innerHTML = localStorage.getItem("data");
+                for(el of unList.childNodes){
+                    if(el.querySelector('.button-check').classList == 'button-check checked'){
+                        el.querySelector('input').checked = true;
+                    }
+                }
+            }
+        }
+        showTask();
+
+    </script>
+</body>
+</html>
+
+<!-- <li class="list">
+                    <input type="radio" value="" class="button-check"> 
+                    <p>Check some mail fdzjlgbhl adhgialj   kw je km</p>
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/multiply.png" alt="multiply"/>
+                </li> -->
+
+                

@@ -1,0 +1,21 @@
+.accordion {
+    display: none;
+}
+*{
+    margin: 1rem;
+}
+h1 {
+    font-size: 36px;
+}
+.list{
+    text-decoration: solid;
+}
+.list-header {
+    padding: 0.3rem;
+     border: 1px solid gray;
+
+}
+.list-contet {
+    border: 1px solid gray;
+    background-color: aquamarine;
+}
