@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "Futura PT medium";
+    src: local("futura-book"),
+        local("Futura PT"),
+        url("./futura-book/FuturaPTMedium.woff") format("woff");
+    font-weight: normal;
+}
+@font-face{
+    font-family: "Futura PT";
+    src: local("futura-book"),
+        local("Futura PT"),
+        url("./futura-book/FuturaPTBook.woff") format("woff");
+    font-weight: normal;
+}
+@font-face{
+    font-family: "Futura PT light";
+    src: local("futura-book"),
+        local("Futura PT"),
+        url("./futura-book/FuturaPTLight.woff") format("woff");
+    font-weight: normal;
+}
+body{
+    font-weight: 400;
+    font-family : "Futura PT", sans-serif;
+    background-color: #F9F9F9;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+}
+.pattern{
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.header{
+    grid-column: span 2;
+}
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+    background-color: #ffffff;
+}
+li{
+
+    list-style: none;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 18px;
+}
+.menu__item{
+    color: #000000;
+}
+.menu__item:hover{
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+a{
+    text-decoration: none;
+}
+.phone{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.aside{
+    /* max-width: 320px;
+    width: 100%; */
+    width: 320px;
+    height: 600px;
+    border: 2px solid green;
+    margin-right: 60px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-left: 60px;
+}
+.news{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    border: 1px solid red;
+    text-align: left;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    grid-column: span 2;
+    width: 100%;
+}
+.extension-block{
+    grid-column: span 3;
+}
+.news__category{
+    display: inline-block;
+    font-size: 16px;
+    color: #5D71DD;
+    padding: 8px 16px;
+    background-color: #F7F8FD;
+    border-radius: 8px;
+}
+.news__date{
+    text-align: right;
+    padding: 8px 16px;
+    /* align-content: end; */
+    color: #2F222266;
+}
+.article{
+    grid-column: span 2;
+    color: #2F222266;
+    font-size: 18px;
+}
+.article__header{
+    font-size: 24px;
+    font-weight: 450;
+    font-family: "Futura PT medium";
+    color: #2F2222;
+    margin-bottom: 20px;
+}
+.news_small{
+    background-color: #5D71DD;
+    border-radius: 20px;
+    padding: 40px 30px;
+    color: #ffffff;
+    max-width: 320px;
+    width: 100%;
+}
+.news__category_small{
+    display: inline-block;
+    color: #ffffff;
+    padding: 8px 16px;
+    background-color: #7D8DE4;
+    border-radius: 8px;
+
+}
+.news__header_small{
+    font-size: 24px;
+    margin: 30px 0 15vh 0;
+    font-family: "Futura PT light";
+
+}
+.news_bg-image{
+    background-image: url("../img/news_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.news_blur{
+    backdrop-filter: blur(1px);
+}
+.news__category_bg{
+    background-color: #FFFFFF33;
+}
+.news-pair{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    grid-column: span 2;
+    width: 100%;
+}
+.news-pair__top{
+    border-radius: 20px;
+    height: 100%;
+}
+.news-pair__bottom{
+    border-radius: 20px;
+    height: 100%;
+}
+.vertical-alignment{
+    display: grid;
+    grid-template-columns: auto auto; 
+    grid-template-rows: auto auto; 
+}
+.vertical-alignment__p{
+    grid-column: span 2;
+    font-size: 24px;
+    font-weight: 450;
+    font-family: "Futura PT medium";
+}
+.bg-image{
+    background-image: url("../img/news_bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer{
+    grid-column: span 2;
+    text-align: center;
+    background-color: #5D71DD0D;
+    padding: 40px;
+}
+.footer__menu{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    justify-content: center;
+    gap: 80px;
+    color: #2F2222;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.footer__text{
+    font-size: 14px;
+    color: #2F2222;
+}
