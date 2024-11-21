@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/inner_news.css">
+
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header-container">
+            <img src="img/main_logo.svg" alt="logo" class = "logo">
+            <nav>
+                <ul class="menu">
+                    <li ><a href="#" class="menu__item">Главная</a></li>
+                    <li ><a href="#" class="menu__item">О нас</a></li>
+                    <li ><a href="#" class="menu__item">Контакты</a></li>
+                    <li ><a href="#" class="menu__item">Поиск</a></li>
+                    <li><div class="phone"><img src="img/phone_logo.svg" alt="phone-img"><a href="tel:+798788787">+7 (987) 887-87</a></div></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label class="burger" for="burger-checkbox"></label>
+            </div>
+        </div>
+        <!-- <img src="img/patter.jpg" alt="pattern" class="pattern"> -->
+        <picture >
+            <source srcset="img/inner_news_pattern_small.png" media="(max-width: 320px)" />
+            <source srcset="img/inner_news_pattern_medium.png" media="(max-width: 1024px)" />
+            <img class="pattern" src="img/inner_news_pattern_large.jpg" />
+        </picture>
+    </header>
+    <main class="main margin-main-aside">
+        <div class="start">
+            <span class="start__category">Категория 1</span>
+            <span class="start__date">13 дек 2020</span>
+        </div>
+        <h1 class="topic">Управление ИТ-активами – скучная рутина или творческая задача?</h1>
+        <p class="paragraph" >Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив проверить, нужен ли он вообще. Выждав несколько дней, он пришёл к руководителю и спросил: «Похоже тот отчёт, который я готовлю, не особо востребован, а что вам действительно нужно?» Руководитель признался, что массивный отчёт хороший, но им не пользуются. И набросал на листе бумаги то, что хотелось бы иметь под рукой.</p>
+        <p class="paragraph">Управление ИТ-активами, как и управление конфигурациями, является базовым процессом для других. В первом случае более важным является финансовый аспект, во втором – эксплуатационные задачи. Оба процесса можно перегрузить деталями и превратить во что-то рутинное. Как же найти баланс и сделать процесс по-настоящему «живым»?</p>
+        <div class="text-flow">
+            <p class="paragraph">Конечно, баланс унификации и персонального подхода – дело каждого. Вспомним историю про послевоенное автомобилестроение: американская и японская тактика. Постепенно японцы достигли превосходства благодаря, в том числе, выверенному балансу унификации и культуре производства. Но это правило не для всех.</p>
+            <div class="picture-flow">
+                <div class="picture-flow__img"></div>
+                <div class="picture-flow__text">Учёт из рутины может превратиться в интересную задачу, своего рода «вызов» по переходу на новый уровень.</div>
+            </div>
+            <p class="paragraph">Конечно, баланс унификации и персонального подхода – дело каждого. Вспомним историю про послевоенное автомобилестроение: американская и японская тактика. Постепенно японцы достигли превосходства благодаря, в том числе, выверенному балансу унификации и культуре производства. Но это правило не для всех.</p>
+        </div>
+        <div class="stack-photo"></div>
+
+    </main>
+
+    <aside class="aside margin-main-aside margin-main-aside">
+        <div class="aside__news">
+            <p class="side-news_header">Популярные новости</p>
+            <div class="side-news">
+                <span class="side-news__header">ITAM&SAMDay – самая настоящая удача!</span>
+                <span class="side-news__date">13 дек 2020</span>
+            </div>
+            <div class="side-news">
+                <span class="side-news__header">Секреты лицензирования. Всё, что вы хотели знать про Microsoft, SAP и Oracle, но не знали, у кого спросить ...</span>
+                <span class="side-news__date">10 дек 2020</span>
+            </div>
+            <div class="side-news side-news_no-border">
+                <span class="side-news__header">Менеджмент XXI века. Надо ли готовиться к изменениям или мы давно уже должны были измениться?</span>
+                <span class="side-news__date">5 дек 2020</span>
+            </div>
+        </div>
+        <div class="aside__sub">
+            <div class="sub-header">Подписка на рассылку</div>
+            <input type="email" value="Email@gmail.com" class="sub-mail"></input>
+            <div class="sub-button">
+                <span>Подписаться</span>
+                <img src="img/right-arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <footer class="footer">
+        <img src="img/main_logo.svg" alt="logo" class = "logo">
+            <ul class="footer__menu">
+                <li><a href="#" class="menu__item">О нас</a></li>
+                <li><a href="#" class="menu__item">Галерея</a></li>
+                <li><a href="#" class="menu__item">Новости</a></li>
+                <li><a href="#" class="menu__item">Контакты</a></li>
+            </ul>
+        <div class="footer__text">ООО “Организация” 2020. Все права защищены</div>
+    </footer>
+</body>
+</html>
