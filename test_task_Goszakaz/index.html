@@ -29,7 +29,7 @@
             <img class="pattern" src="img/large_pattern.jpg" />
         </picture>
     </header>
-    <main class="main">
+    <main class="main margin-main-aside">
         <div class="news extension-block">
             <div><span class="news__category">Категория 1</span></div>
             <div class="news__date">13 дек 2020</div>
@@ -71,7 +71,7 @@
             </div>
         </div>
         
-        <div class="news">
+        <div class="news block-hide">
             <div><span class="news__category">Категория 1</span></div>
             <div class="news__date">13 дек 2020</div>
             <div class="article">
@@ -79,18 +79,18 @@
                 Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив проверить, нужен ли он вообще.
             </div>
         </div>
-        <div class="news_small">
+        <div class="news_small block-hide">
             <div><span class="news__category_small">Категория 1</span></div>
             <p class="news__header_small">ITAM&SAMDay – самая настоящая удача!</p>
             <div class="news__date_small">13 дек 2020</div>
         </div>
-        <div class="news_small news_bg-image bg-image">
+        <div class="news_small news_bg-image bg-image block-hide">
                 <div><span class="news__category_small news__category_bg">Очень длинная категория 2</span></div>
                 <p class="news__header_small news_blur">Управление ИТ-активами – скучная рутина или творческая задача?</p>
                 <div class="news__date_small">13 дек 2020</div>
         </div>
         
-        <div class="news-pair">
+        <div class="news-pair block-hide">
             <div class="news-pair__top vertical-alignment">
                 <div><span class="news__category">Категория 1</span></div>
                 <div class="news__date">13 дек 2020</div>
@@ -103,8 +103,30 @@
             </div>
         </div>
     </main>
-    <aside class="aside">
-        
+    <aside class="aside margin-main-aside">
+        <div class="aside__news">
+            <p class="side-news_header">Популярные новости</p>
+            <div class="side-news">
+                <span class="side-news__header">ITAM&SAMDay – самая настоящая удача!</span>
+                <span class="side-news__date">13 дек 2020</span>
+            </div>
+            <div class="side-news">
+                <span class="side-news__header">Секреты лицензирования. Всё, что вы хотели знать про Microsoft, SAP и Oracle, но не знали, у кого спросить ...</span>
+                <span class="side-news__date">10 дек 2020</span>
+            </div>
+            <div class="side-news side-news_no-border">
+                <span class="side-news__header">Менеджмент XXI века. Надо ли готовиться к изменениям или мы давно уже должны были измениться?</span>
+                <span class="side-news__date">5 дек 2020</span>
+            </div>
+        </div>
+        <div class="aside__sub">
+            <div class="sub-header">Подписка на рассылку</div>
+            <input type="email" value="Email@gmail.com" class="sub-mail"></input>
+            <div class="sub-button">
+                <span>Подписаться</span>
+                <img src="img/right-arrow.svg" alt="">
+            </div>
+        </div>
     </aside>
     <footer class="footer">
         <img src="img/main_logo.svg" alt="logo" class = "logo">

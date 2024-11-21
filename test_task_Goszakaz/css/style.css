@@ -30,7 +30,10 @@ body{
     background-color: #F9F9F9;
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 40px;
+    gap: 40px 0;
+}
+.margin-main-aside{
+    margin: 0 40px;
 }
 .pattern{
     width: 100%;
@@ -73,34 +76,96 @@ a{
     flex-direction: row;
     gap: 5px;
 }
+.block-hide{
+    display: block;
+}
 .aside{
     /* max-width: 320px;
     width: 100%; */
     width: 320px;
     height: 600px;
-    border: 2px solid green;
-    margin-right: 60px;
+    /* border: 2px solid green; */
+    /* margin-right: 60px; */
+    text-align: center;
+}
+.side-news_header{
+    font-size: 24px;
+    color: #2F2222;
+    font-weight: 450;
+    font-family: "Futura PT medium";
+    margin-bottom: 30px;
+}
+.side-news{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #2F22221A;
+    margin-bottom: 10px;
+}
+.side-news__header{
+    font-weight: 400;
+}
+.side-news__date{
+    color: #E5E4E4;
+    margin-bottom: 10px;
+}
+.side-news_no-border{
+    border: none;
+}
+.aside__sub{
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 0 30px;
+}
+.sub-header{
+    font-size: 24px;
+    font-weight: 450;
+    font-family: "Futura PT medium";
+    margin-bottom: 30px;
+}
+.sub-button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #ffff;
+    background-color: #5D71DD;
+    border-radius: 20px;
+    padding: 14px 0;
+    font-size: 18px;
+}
+.sub-mail{
+    min-width: 200px;
+    width: 100%;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    color: #2F222266;
+    font-size: 18px;
+    padding: 13px 0;
+    margin-bottom: 20px;
+    border: none;
+    padding-left: 30px;
 }
 .main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 40px;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 .news{
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
-    border: 1px solid red;
     text-align: left;
     padding: 40px;
     background-color: #ffffff;
     border-radius: 20px;
-    grid-column: span 2;
+    grid-column: span 3;
     width: 100%;
 }
 .extension-block{
-    grid-column: span 3;
+    grid-column: span 4;
 }
 .news__category{
     display: inline-block;
@@ -154,6 +219,7 @@ a{
     background-image: url("../img/news_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    /* justify-self: flex-end; */
 }
 .news_blur{
     backdrop-filter: blur(1px);
@@ -168,7 +234,7 @@ a{
     gap: 40px;
     padding: 30px 40px;
     background-color: #ffffff;
-    grid-column: span 2;
+    grid-column: span 3;
     width: 100%;
 }
 .news-pair__top{
@@ -199,7 +265,7 @@ a{
     grid-column: span 2;
     text-align: center;
     background-color: #5D71DD0D;
-    padding: 40px;
+    /* padding: 40px; */
 }
 .footer__menu{
     display: flex;
@@ -210,9 +276,73 @@ a{
     color: #2F2222;
     margin-top: 2%;
     margin-bottom: 5%;
+    white-space: nowrap;
 }
 
 .footer__text{
     font-size: 14px;
     color: #2F2222;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .aside{
+        max-width: 940px;
+        width: 100%;
+        height: auto;
+        justify-self: center;
+        padding: 40px;
+    }
+    .aside__news{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 20px;
+    }
+    .side-news{
+        border: none;
+        text-align: left;
+        
+    }
+    .side-news_header{
+        text-align: left;
+        grid-column: span 3;
+    }
+    .side-news__header{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .side-news__date{
+        padding: 0;
+        display: block;
+    }
+    .aside__sub{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        padding: 80px;
+    }
+    .sub-header{
+        text-align: left;
+        grid-column: span 2;
+    }
+    .sub-mail{
+        height: 100%;
+        margin: 0;
+    }
+    .block-hide{
+        display: none;
+    }
+    .main{
+        grid-column: span 2;
+    }
+}
+@media screen and (max-width: 320px) {
+    body{
+        background-color: purple;
+    }
+    .news{
+        grid-column: span 4;
+    }
 }
