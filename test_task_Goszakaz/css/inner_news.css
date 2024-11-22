@@ -9,6 +9,9 @@
     font-family : "Futura PT", sans-serif;
 
 }
+.link{
+    text-decoration: none;
+}
 .margin-main-aside{
     margin: 0 40px;
 }
@@ -45,9 +48,7 @@ li{
     color: blue;
     border-bottom: 1px solid blue;
 }
-a{
-    text-decoration: none;
-}
+
 .burger-menu{
     display: none;
 }
@@ -129,17 +130,6 @@ a{
     border: none;
     padding-left: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
 .main{
     margin-top: 48px;
 }
@@ -165,8 +155,9 @@ a{
 }
 .text-flow{
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin-bottom: 4vh;
 }
 .picture-flow{
     grid-row: span 2;
@@ -185,19 +176,29 @@ a{
     font-size: 14px;
 }
 .stack-photo{
-    background: linear-gradient(#c4c4c43a,#c4c4c481), url("../img/stack_photo.jpg") center no-repeat;
-    height: 100%;
+    max-width: 800px;
+    margin-bottom: 3vh;
 }
-
-
-
-
-
-
-
-
-
-
+.stack-photo__picture{
+    padding-top: 37.87%;
+    background: linear-gradient(#c4c4c43a,#c4c4c481), url("../img/stack_photo.jpg") center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+.news-pages{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding: 10px 16px;
+}
+.news-pages__back, .news-pages__forward{
+    display: inline-block;
+    font-size: 18px;
+    color: #5D71DD;
+    padding: 8px 16px;
+    background-color: #F7F8FD;
+    border-radius: 8px;
+}
 .footer{
     grid-column: span 2;
     text-align: center;
@@ -218,20 +219,16 @@ a{
 .footer__text{
     font-size: 14px;
     color: #2F2222;
+    margin-bottom: 40px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 1024px) {
+    .stack-photo{
+        min-width: 800px;
+        max-width: none;
+    }
+    .stack-photo__picture{
+    }
+}
 
 @media screen and (min-width: 500px) and (max-width: 1024px) {
     .main{
@@ -284,9 +281,29 @@ a{
     .block-hide{
         display: none;
     }
+    .stack-photo__picture{
+        padding-top: 10%;
+        height: 295px;
+    }
+
     
 }
 
+@media screen and (max-width: 800px) {
+    .picture-flow{
+        text-align: center;
+        grid-area: 1/1/1/3;
+        padding: 20px 0;
+        margin-left: 0;
+        justify-self: center;
+    }
+    .paragraph{
+        grid-column: span 2;
+    }
+    .paragraph_grid{
+        grid-area: 2/1/2/3;
+    }
+}
 @media screen and (max-width: 500px) {
     .menu{
         display: none;  
@@ -342,5 +359,16 @@ a{
     }
     .main{
         grid-column: span 4;
+    }
+    
+    .footer{
+        grid-column: span 4;
+    }
+    .footer__menu{
+        font-size: 24px;
+        gap: 20px;
+    }
+    .footer__text{
+        font-size: 20px;
     }
 } 
