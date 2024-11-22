@@ -135,7 +135,6 @@ a{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 40px;
-    /* margin-left: 60px; */
 }
 .news{
     display: grid;

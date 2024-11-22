@@ -7,13 +7,13 @@
     display: grid;
     grid-template-columns: 1fr auto;
     font-family : "Futura PT", sans-serif;
-
+    
+}
+.margin-main-aside{
+    margin: 0 20px;
 }
 .link{
     text-decoration: none;
-}
-.margin-main-aside{
-    margin: 0 40px;
 }
 .pattern{
     width: 100%;
@@ -97,7 +97,7 @@ li{
     text-align: center;
     background-color: #FFFFFF;
     border-radius: 20px;
-    padding: 0 30px;
+    padding-left:30px;
 }
 .sub-header{
     font-size: 24px;
