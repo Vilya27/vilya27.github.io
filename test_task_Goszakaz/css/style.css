@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --main-color: #5D71DD;
+    --main-color-light: rgba(93, 113, 221, 0.05);
+    --text-color: #2F2222;
+}
 body{
     font-weight: 400;
     font-family : "Futura PT", sans-serif;
@@ -23,7 +27,7 @@ body{
 .header{
     grid-column: span 2;
 }
-.header-container {
+.header__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
