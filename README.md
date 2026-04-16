@@ -1,5 +1,7 @@
 # Contents
 
+- [Проект Тамерлана Заникова для помощи подросткам](https://teenagers.lad-academy.ru/)
+- [Приложение для расчёта термодинамических функций](https://staging-thermopol-app.lad-academy.ru/search/)
 - [Photo collage](https://vilya27.github.io/PhotoCollage)
 - [Landing page DigitalAgency](https://vilya27.github.io/DigitalAgency/) - _[Link to figma](https://www.figma.com/design/novnfvK2pKoNws3cMdL7RO/Website-Landing-Page-(Community)?node-id=0-1&m=dev&t=qanj5MTv5XfhGgfk-1)_
 - [Landing page Moxa](https://vilya27.github.io/Moxa/)  - _[Link to figma](https://www.figma.com/design/n7aqchcXksGCitkqd6REQw/Moxa?node-id=0-1&m=dev&t=TMe1CLdrepIKDzQj-1)_
